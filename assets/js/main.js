@@ -1,58 +1,43 @@
-function createCalculator() {
-    return {
-        display: document.querySelector('.display'),
-        start() {
-            this.clickButtons();
-            this.pressEnter();
-        },
-        pressEnter() {
-            this.display.addEventListener('keyup', event => {
-               if (event.keyCode === 13) {
-                   this.doCount();
-               } 
-            })
-        },
-        clearDisplay() {
-            this.display.value = ' ';
-        },
-        deleteOne() {
-            this.display.value = this.display.value.slice(0, -1);
-        },
-        doCount() {
-            let count = this.display.value;
-            try {
-                count = eval(count);
-                if (!count) {
-                    alert('Invalid count!');
-                    return;
-                }
-                this.display.value = count;
-            } catch(error) {
+function Calculator() {
+    this.display = document.querySelector('.display');
+    this.start = () => {
+        this.catchClicks();
+        this.catchEnter();
+    };
+    this.catchEnter = () => {
+        document.addEventListener('keypress', event => {
+            if (event === 13);
+            this.equalNumberDisplay();
+        });
+    };
+    this.catchClicks = () => {
+        document.addEventListener('click', event => {
+            const element = event.target;
+            if (element.classList.contains('button-number')) this.addNumberDisplay(element);
+            if (element.classList.contains('button-clear')) this.clearNumberDisplay();
+            if (element.classList.contains('button-delete')) this.deleteNumberDisplay();
+            if (element.classList.contains('button-equal')) this.equalNumberDisplay();
+        });
+    };
+    this.equalNumberDisplay = () => {
+        try {
+            const count = eval(this.display.value);
+            if (!count) {
                 alert('Invalid count!');
                 return;
             }
-        },
-        clickButtons() {
-            document.addEventListener('click', event => {
-                const element = event.target;
-                if (element.classList.contains('button-number')) {
-                    this.buttonForDisplay(element.innerText);
-                }
-                if (element.classList.contains('button-clear')) {
-                    this.clearDisplay();
-                }
-                if (element.classList.contains('button-delete')) {
-                    this.deleteOne();
-                }
-                if (element.classList.contains('button-equal')) {
-                    this.doCount();
-                }
-            });
-        },
-        buttonForDisplay(value) {
-            this.display.value += value;
+            this.display.value = count;
+        } catch (error) {
+            alert('Invalid count!');
+            return;
         }
     };
+    this.addNumberDisplay = element => {
+        this.display.value += element.innerText;
+        this.display.focus();
+    };
+    this.clearNumberDisplay = () => this.display.value = '';
+    this.deleteNumberDisplay = () => this.display.value = this.display.value.slice(0, -1);
 }
-const calculator = createCalculator();
+const calculator = new Calculator();
 calculator.start();
