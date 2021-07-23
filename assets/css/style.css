@@ -47,4 +47,5 @@ button:hover {
 .name {
     text-align: center;
     color: white;
+    font-style: italic;
 }
