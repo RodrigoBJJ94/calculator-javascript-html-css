@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 :root {
-    --primary-color: rgb(11, 136, 158);
+    --primary-color: #0A1128;
 }
 * {
     box-sizing: border-box;
@@ -42,7 +42,7 @@ body{
     cursor: pointer;
 }
 button:hover {
-    background: rgb(11, 136, 158);
+    background: #152d7e;
 }
 .name {
     text-align: center;
