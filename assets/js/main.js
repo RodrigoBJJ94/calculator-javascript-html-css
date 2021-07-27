@@ -26,12 +26,12 @@ function Calculator() {
         try {
             const count = eval(this.display.value);
             if (!count) {
-                alert('Invalid count!');
+                alert('Conta!');
                 return;
             }
             this.display.value = count;
         } catch (error) {
-            alert('Invalid count!');
+            alert('\n\nConta inválida!'.toUpperCase());
             return;
         }
     };
