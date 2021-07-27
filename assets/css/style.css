@@ -61,4 +61,7 @@ button:hover {
         padding-top: 0px;
         margin-top: -25px;
     }
+    .display {
+        font-size: 1.7rem;
+    }
 }

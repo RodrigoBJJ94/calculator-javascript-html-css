@@ -26,7 +26,7 @@ function Calculator() {
         try {
             const count = eval(this.display.value);
             if (!count) {
-                alert('Conta!');
+                alert('\n\nConta inválida!'.toUpperCase());
                 return;
             }
             this.display.value = count;
