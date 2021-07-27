@@ -23,7 +23,7 @@ body{
     border-radius: 20px;
 }
 .calculator {
-    width: 350px;
+    width: 360px;
 }
 .container h1 {
     text-align: center;
@@ -48,4 +48,17 @@ button:hover {
     text-align: center;
     color: white;
     font-style: italic;
+    padding-top: 370px;
+}
+@media (max-width: 800px) {
+    .container {
+        max-width: 304px;
+    }
+    .calculator {
+        width: 266px;
+    }
+    .name {
+        padding-top: 0px;
+        margin-top: -25px;
+    }
 }
