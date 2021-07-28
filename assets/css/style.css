@@ -40,7 +40,6 @@ body{
     border: none;
     background: #dfdfdf;
     cursor: pointer;
-    border-radius: 10px;
 }
 button:hover {
     background: grey;
@@ -52,17 +51,17 @@ button:hover {
     padding-top: 370px;
 }
 @media (max-width: 800px) {
+    .container {
+        max-width: 304px;
+    }
+    .calculator {
+        width: 266px;
+    }
     .name {
         padding-top: 0px;
-        margin-top: 180px;
+        margin-top: -25px;
     }
     .display {
         font-size: 1.7rem;
-    }
-    .container {
-        margin-left: 25px;
-        margin-right: 25px;
-    }
-    .calculator {
     }
 }
