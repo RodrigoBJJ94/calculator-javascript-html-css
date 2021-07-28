@@ -65,4 +65,7 @@ button:hover {
     .display {
         font-size: 1.7rem;
     }
+    .name {
+        margin-top: 160px;
+    }
 }
