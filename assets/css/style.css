@@ -19,7 +19,7 @@ body{
 }
 
 .container {
-    max-width: 400px;
+    max-width: 305px;
     margin: 50px auto;
     background: #e8edfd;
     padding: 20px;
@@ -27,7 +27,7 @@ body{
 }
 
 .calculator {
-    width: 360px;
+    width: 270px;
 }
 
 .container h1 {
@@ -35,7 +35,7 @@ body{
 }
 
 .display {
-    font-size: 2em;
+    font-size: 1.5em;
     width: 100%;
     text-align: right;
 }
@@ -59,6 +59,11 @@ button:hover {
     color: white;
     font-style: italic;
     padding-top: 370px;
+}
+
+.swal-text {
+    font-size: 1.5rem;
+    color: rgb(177, 39, 39);
 }
 
 @media (max-width: 800px) {
