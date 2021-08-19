@@ -54,13 +54,6 @@ button:hover {
     background: rgba(128, 128, 128, 0.507);
 }
 
-.name {
-    text-align: center;
-    color: white;
-    font-style: italic;
-    padding-top: 370px;
-}
-
 .swal-text {
     font-size: 1.5rem;
     color: rgb(177, 39, 39);
@@ -75,17 +68,8 @@ button:hover {
         width: 266px;
     }
 
-    .name {
-        padding-top: 0px;
-        margin-top: -25px;
-    }
-
     .display {
         font-size: 1.7rem;
-    }
-    
-    .name {
-        margin-top: 150px;
     }
 }
 
@@ -102,9 +86,5 @@ button:hover {
         margin-top:  -4px;
         margin-bottom: 3px;
         font-size: 120%;
-    }
-
-    .name {
-        margin-top: 90px;
     }
 }
